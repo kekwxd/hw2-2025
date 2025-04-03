@@ -6,9 +6,6 @@
 using namespace std;
 
 
-
-
-
 void displayResults(double difference, double totalPoint, double goalPoint, double assistPoint, double nutmegPoint){
     cout << "From scoring goals, you collected " << goalPoint << " points." << endl;
     cout << "From making assists, you collected " << assistPoint << " points." << endl;
@@ -20,11 +17,9 @@ void displayResults(double difference, double totalPoint, double goalPoint, doub
     } else if (difference > 0) {
         cout << "You have surpassed your goal! You have extra " << difference << " points :)" << endl;
     } else {
-        cout << "You did not reach your goal by " << -difference << " points." << endl;
+        cout << "You did not reach your goal by " << (difference*-1) << " points." << endl;
     }
 }
-
-
 
 
 double calculateScore(int league, const string &exercise){
@@ -62,7 +57,6 @@ double calculateScore(int league, const string &exercise){
     return 0;
 
 }
-
 
 
 void computeResults(int matches, int goal, int league, int goalCount, int assistCount, int nutmegCount){
@@ -171,13 +165,9 @@ void makeUsername(const string &sentence){
         yas--;
     }
         
-       
-    
     username = firstname + lastname + itoa(yas);
     getInput(username);
 }
-
-
 
 
 
